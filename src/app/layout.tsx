@@ -4,7 +4,7 @@ import "./globals.css";
 import keywords from "../contexts/meta/keywords.json";
 import SEOMetaTags from "../contexts/meta/SEOTags";
 import  {ThemeProvider} from "@/components/common/ThemeProvider";
-
+import BgGradient from "@/components/common/BgGradient";
 
 
 export const revalidate = 0;
@@ -26,12 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
-          >
+        >
+            <BgGradient />
             {children}
         </ThemeProvider>
       </body>

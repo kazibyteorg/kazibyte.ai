@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import navigationItems from "./nav/navigationItems";
 import { ModeToggle } from "@/components/common/ModeToggle";
+import BgGradient from "@/components/common/BgGradient";
 
 
 const Navbar = () => {
@@ -25,7 +26,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="">
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
