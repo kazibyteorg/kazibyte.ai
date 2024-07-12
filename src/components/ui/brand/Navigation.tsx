@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState, ReactNode } from "react";
 
 interface NavItem {
@@ -150,19 +151,29 @@ const navigationItems: NavigationItem[] = [
     isDropdown: false,
   },
   {
-    title: "About",
-    path: "/about",
-    isDropdown: false,
-  },
-  {
-    title: "Services",
-    path: "/services",
+    title: "Our Solutions",
+    path: "/our-solutions",
     isDropdown: true,
     navs: dropdownNavs,
   },
   {
-    title: "Contact",
-    path: "/contact",
+    title: "Services",
+    path: "/services",
+    isDropdown: false,
+  },
+  {
+    title: "Our Works",
+    path: "/our-works",
+    isDropdown: false,
+  },
+  {
+    title: "Technology",
+    path: "/technology",
+    isDropdown: false,
+  },
+  {
+    title: "About Us",
+    path: "/about-us",
     isDropdown: false,
   },
 ];
@@ -218,7 +229,7 @@ const Navbar = () => {
                               {navGroup.label}
                             </p>
                             {navGroup.navs.map((navItem) => (
-                              <a
+                              <Link
                                 key={navItem.title}
                                 href={navItem.path}
                                 className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -230,7 +241,7 @@ const Navbar = () => {
                                     {navItem.desc}
                                   </p>
                                 </div>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         ))}
@@ -270,12 +281,12 @@ const Navbar = () => {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navigationItems.map((item) => (
             <div key={item.title} className="relative">
-              <a
+              <Link
                 href={item.path}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
               >
                 {item.title}
-              </a>
+              </Link>
               {item.isDropdown && (
                 <div>
                   <button
@@ -309,7 +320,7 @@ const Navbar = () => {
                           {navGroup.label}
                         </p>
                         {navGroup.navs.map((navItem) => (
-                          <a
+                          <Link
                             key={navItem.title}
                             href={navItem.path}
                             className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
@@ -321,7 +332,7 @@ const Navbar = () => {
                                 {navItem.desc}
                               </p>
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     ))}
