@@ -1,9 +1,11 @@
 import Button from '@/components/common/Button'
+import Navbar from '@/components/ui/brand/Navigation';
 import React from 'react'
 
 const Home = () => {
   return (
     <div>
+    <Navbar />
       <h1 className="text-3xl font-bold underline">Home</h1>
 
       <Button name="Home" link="/" />
