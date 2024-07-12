@@ -1,13 +1,16 @@
+import keywords from "../meta/keywords.json";
+
+
 const Metatags = {
     title: "KaziByte - Empowering Digital Solutions for a Connected World",
     description:
       "KaziByte is a student-run, non-profit, student-led, and student-run organization.",
   };
   
-  const SEOMETATAGS = {
+  const SEOMetaTags = {
     title: Metatags.title,
     description: Metatags.description,
-    keywords: "digital solutions, student-run organization, non-profit",
+    keywords: keywords.keywordData.join(", "),
     author: "zobaiudlkazi",
     robots: "index,follow",
     viewport: "width=device-width, initial-scale=1.0",
@@ -25,4 +28,4 @@ const Metatags = {
   };
   
 
-  export default SEOMETATAGS;
+  export default SEOMetaTags;
