@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import keywords from "../contexts/meta/keywords.json";
 import SEOMetaTags from "../contexts/meta/SEOTags";
+import  {ThemeProvider} from "@/components/common/ThemeProvider";
+
+
 
 export const revalidate = 0;
 
@@ -22,9 +25,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
-      <body className={inter.className}>{children}
-      
+      <body className={inter.className}>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+        </ThemeProvider>
       </body>
     </html>
   );
