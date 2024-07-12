@@ -1,4 +1,26 @@
 import keywords from "../meta/keywords.json";
+import { z } from "zod";
+
+const SEOMetaTagsSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  keywords: z.string(),
+  author: z.string(),
+  robots: z.string(),
+  viewport: z.string(),
+  ogTitle: z.string(),
+  ogDescription: z.string(),
+  ogType: z.string(),
+  ogUrl: z.string(),
+  ogImage: z.string(),
+  twitterCard: z.string(),
+  twitterCreator: z.string(),
+  canonical: z.string(),
+  language: z.string(),
+  geoRegion: z.string(),
+  geoPlacename: z.string(),
+});
+
 
 
 const Metatags = {
@@ -7,7 +29,7 @@ const Metatags = {
       "KaziByte is a student-run, non-profit, student-led, and student-run organization.",
   };
   
-  const SEOMetaTags = {
+  const SEOMetaTags: z.infer<typeof SEOMetaTagsSchema> = {
     title: Metatags.title,
     description: Metatags.description,
     keywords: keywords.keywordData.join(", "),
