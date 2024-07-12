@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import navigationItems from "./nav/navigationItems";
+import { ModeToggle } from "@/components/common/ModeToggle";
 
 
 const Navbar = () => {
@@ -81,20 +82,12 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="flex justify-end  text-sm text-gray-100">
-              <p>
-                Dark | Light
-              </p>
-              <p>
-                BD | USD | EUR
-              </p>
+              <ModeToggle />
             </div>
-            
           </div>
 
           <div className="-mr-2 flex md:hidden">
-            <p className="block px-4 py-2 text-sm text-gray-100">
-              Dark | Light
-            </p>
+            <ModeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
