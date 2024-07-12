@@ -1,0 +1,44 @@
+{
+    "name": "FAQ",
+    "description": "Frequently Asked Questions",
+    "locale": "en-US",
+    "items": [
+      {
+        "question": "What is Kazi Byte?",
+        "answer": "Kazi Byte is a software development company dedicated to revolutionizing the digital landscape with innovative solutions and cutting-edge technologies."
+      },
+      {
+        "question": "What does Kazi Byte specialize in?",
+        "answer": "Kazi Byte specializes in web development, software solutions, cybersecurity, and digital marketing. They offer tailored services to meet the unique needs of their clients."
+      },
+      {
+        "question": "How does Kazi Byte differentiate itself in the industry?",
+        "answer": "Kazi Byte differentiates itself through its commitment to innovation, technical expertise, and a customer-centric approach. They focus on delivering high-quality solutions that exceed client expectations."
+      },
+      {
+        "question": "Which industries does Kazi Byte serve?",
+        "answer": "Kazi Byte serves a diverse range of industries including finance, healthcare, e-commerce, education, and technology startups."
+      },
+      {
+        "question": "How does Kazi Byte ensure cybersecurity in its solutions?",
+        "answer": "Cybersecurity is a priority at Kazi Byte. They integrate robust security measures and follow industry best practices to protect client data and infrastructure."
+      },
+      {
+        "question": "What is Kazi Byte's approach to digital marketing?",
+        "answer": "Kazi Byte adopts a strategic and data-driven approach to digital marketing. They create customized strategies to enhance brand visibility and engage target audiences effectively."
+      },
+      {
+        "question": "How does Kazi Byte support startups?",
+        "answer": "Kazi Byte supports startups by providing scalable and cost-effective digital solutions. They offer guidance, technical expertise, and innovative ideas to help startups establish their presence and accelerate growth."
+      },
+      {
+        "question": "What technologies does Kazi Byte specialize in?",
+        "answer": "Kazi Byte specializes in a variety of technologies including JavaScript, TypeScript, Node.js, React, Angular, Python, Django, and cloud computing platforms."
+      },
+      {
+        "question": "How does Kazi Byte ensure client satisfaction?",
+        "answer": "Client satisfaction is a priority at Kazi Byte. They maintain open communication, prioritize understanding client goals, and consistently deliver high-quality solutions."
+      }
+    ]
+  }
+  
