@@ -1,11 +1,9 @@
-'use client';
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import navigationItems from "./nav/navigationItems";
-import { ModeToggle } from "@/components/common/ModeToggle";
-import BgGradient from "@/components/common/BgGradient";
-
+import ThemeSwitch from "@/components/common/ThemeSwitch";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +25,6 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -46,13 +43,14 @@ const Navbar = () => {
                 {navigationItems.map((item) => (
                   <div key={item.title} className="relative group">
                     <a
-                      href={item.path}
+                      onClick={(e) => e.preventDefault()}
+                      href="#"
                       className="px-3 py-2 rounded-md text-sm font-medium hover:bg-green-700 shadow-sm"
                     >
                       {item.title}
                     </a>
                     {item.isDropdown && (
-                      <div className="absolute left-0 z-10 hidden mt-2 w-80  bg-white rounded-md shadow-lg group-hover:block">
+                      <div className="absolute left-0 z-10 hidden mt-2 w-80 bg-white rounded-md shadow-lg group-hover:block">
                         {item.navs?.map((navGroup) => (
                           <div key={navGroup.label} className="py-1">
                             <p className="block px-4 py-2 text-sm text-gray-700">
@@ -83,13 +81,13 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="flex justify-end  text-sm text-gray-100">
-              <ModeToggle />
+            <div className="flex justify-end text-sm text-gray-100">
+              <ThemeSwitch />
             </div>
           </div>
 
           <div className="-mr-2 flex md:hidden">
-            <ModeToggle />
+            <ThemeSwitch />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"

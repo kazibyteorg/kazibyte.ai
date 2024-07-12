@@ -18,7 +18,7 @@ const Newsletter: React.FC = () => {
           >
             <div className="relative">
               <svg
-                className="w-6 h-6 text-gray-400 absolute left-3 inset-y-0 my-auto"
+                className="w-6 h-6 absolute left-3 inset-y-0 my-auto"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -35,7 +35,7 @@ const Newsletter: React.FC = () => {
                 type="email"
                 required
                 placeholder="Enter your email"
-                className="w-full pl-12 pr-3 py-2 text-gray-500 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                className="w-full pl-12 pr-3 py-2 text-gray-500 outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
             <button className="block w-auto py-3 px-4 font-medium text-sm text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow">
@@ -44,13 +44,6 @@ const Newsletter: React.FC = () => {
           </form>
         </div>
       </div>
-      <div
-        className="absolute inset-0 w-full h-full"
-        style={{
-          background:
-            "linear-gradient(137.92deg, rgba(192, 132, 252, 0) 20.43%, rgba(232, 121, 249, 0.26) 49.66%, rgba(204, 171, 238, 0) 92.38%)",
-        }}
-      ></div>
     </section>
   );
 };

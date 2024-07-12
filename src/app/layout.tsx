@@ -26,15 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-            <BgGradient />
-            {children}
+          <BgGradient />
+          <div className="min-h-screen">{children}</div>
         </ThemeProvider>
       </body>
     </html>

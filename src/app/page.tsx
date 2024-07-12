@@ -12,9 +12,7 @@ const Home = () => {
       
       <Navbar />
 
-      <CenteredCTA />
-      <Enterprise />
-      <Newsletter />
+      
     </div>
   );
 }
