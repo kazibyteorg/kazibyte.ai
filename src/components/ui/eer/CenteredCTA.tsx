@@ -6,7 +6,7 @@ import React from "react";
 const CenteredCTA: React.FC = () => {
   return (
     <section>
-      <div className="max-w-screen-xl mx-auto px-4 md:text-center md:px-8">
+      <div className="max-w-screen-xl mt-56 mx-auto px-4 md:text-center md:px-8">
         <div className="max-w-xl space-y-3 md:mx-auto">
           <h3 className=" font-semibold">
             Professional services

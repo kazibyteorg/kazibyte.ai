@@ -35,7 +35,7 @@ const ThemeSwitch = () => {
   return (
     <div className="relative inline-block text-left">
       <button
-        className="inline-flex justify-center w-16 px-4 py-2 rounded-md shadow-lg shadow-neutral-400 text-base font-medium focus:outline-none text-black dark:text-white hover:bg-green-500"
+        className="inline-flex  rounded-full justify-center px-4 py-2  shadow-lg shadow-neutral-400 text-base font-medium focus:outline-none text-black dark:text-white hover:bg-green-500"
         onClick={() => setDropdownOpen(!dropdownOpen)}
       >
         <span>{getIcon(theme || "system")}</span>
@@ -56,7 +56,7 @@ const ThemeSwitch = () => {
       </button>
 
       {dropdownOpen && (
-        <ul className="absolute right-0 z-10 mt-2 w-16 rounded-md shadow-lg shadow-neutral-400 text-black dark:text-white ring-black ring-opacity-5 focus:outline-none dark:bg-gray-800">
+        <ul className="absolute right-0 z-10 mt-2 w-16 rounded-full shadow-lg shadow-neutral-400 text-black dark:text-white ring-black ring-opacity-5 focus:outline-none dark:bg-gray-800">
           <li
             className={`cursor-pointer flex items-center justify-center w-full h-12 hover:bg-companyGreen dark:hover:bg-gray-600`}
             onClick={() => handleThemeChange("system")}

@@ -33,7 +33,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <BgGradient />
-          <div className="min-h-screen">{children}</div>
+          <div className=" text-black dark:text-white"> {children}</div>
         </ThemeProvider>
       </body>
     </html>
