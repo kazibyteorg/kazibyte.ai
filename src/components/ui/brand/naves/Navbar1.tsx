@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ThemeSwitch from "@/components/common/ThemeSwitch";
 
 interface NavItem {
   label: string;
@@ -90,23 +91,26 @@ const Navbar: React.FC = () => {
         isScrolled ? " shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto p-4 md:px-8">
+      <div className="container mx-auto p-2 md:px-8">
         <div className="flex flex-wrap items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="text-xl flex items-center font-bold">
-              <Image src="https://github.com/kazibyte/kazibyte.github.io/blob/main/public/android-chrome-384x384.png?raw=true" alt="KaziByte Logo" width={40} height={40} />
+              <Image
+                src="https://github.com/kazibyte/kazibyte.github.io/blob/main/public/android-chrome-384x384.png?raw=true"
+                alt="KaziByte Logo"
+                width={40}
+                height={40}
+              />
               <span className="ml-2 text-3xl font-extralight">KaziByte</span>
             </Link>
           </div>
+
           {/* Desktop Menu */}
           <div className="hidden lg:block">
             <div className="flex items-center space-x-4">
               {navItems.map((item, index) => (
                 <div key={index} className="relative group">
-                  <Link
-                    href={item.href}
-                    className="text-3xl font-medium"
-                  >
+                  <Link href={item.href} className="text-xl font-medium">
                     {item.label}
                   </Link>
                   {item.dropdownItems && (
@@ -126,12 +130,13 @@ const Navbar: React.FC = () => {
               ))}
             </div>
           </div>
+          <div className="text-xl  ml-40
+           font-bold justify-end ">
+            <ThemeSwitch />
+           </div>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <button
-              onClick={toggleMobileMenu}
-              className=" focus:outline-none"
-            >
+            <button onClick={toggleMobileMenu} className=" focus:outline-none">
               <svg
                 className="h-6 w-6"
                 fill="none"
