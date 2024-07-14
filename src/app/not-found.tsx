@@ -1,6 +1,9 @@
-import Button from "@/components/common/Button";
+"use client";
 import Link from "next/link";
 import React from "react";
+import { Button } from '@headlessui/react'
+
+
 
 const NotFound: React.FC = () => {
   return (
@@ -15,10 +18,12 @@ const NotFound: React.FC = () => {
           removed.
         </p>
 
-        <div
-          className=" font-medium inline-flex items-center gap-x-1"
-        >
-          <Button link="/" name="Back to Home" />
+        <div className=" font-medium inline-flex items-center gap-x-1">
+          <Link href="/">
+            <Button className="inline-flex items-center gap-2 rounded-md bg-gray-700 py-1.5 px-3 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white">
+              Save changes
+            </Button>
+          </Link>
         </div>
       </div>
     </main>

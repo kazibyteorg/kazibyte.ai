@@ -17,8 +17,8 @@ type ButtonProps = z.infer<typeof ButtonPropsSchema>;
 const Button: React.FC<ButtonProps> = ({ name, link, className }) => {
   return (
     <Link href={link}>
-      <p
-        className={`inline-flex items-center justify-center rounded-full bg-secondary px-6 py-3 text-base font-medium border-spacing-1 border border-secondary hover:bg-green-500  ${className}`}
+      <span
+        className={`inline-flex items-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 ${className}`}
       >
         {name}
         <svg
@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({ name, link, className }) => {
             clipRule="evenodd"
           />
         </svg>
-      </p>
+      </span>
     </Link>
   );
 };

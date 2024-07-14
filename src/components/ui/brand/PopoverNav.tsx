@@ -32,7 +32,7 @@ const menuItems = [
   },
 ];
 
-export default function Example() {
+export default function PopoverNav() {
   return (
     <div className="">
       <Menu>

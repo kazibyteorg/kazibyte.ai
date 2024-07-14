@@ -1,7 +1,7 @@
 'use client';
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Sun, Moon, Monitor } from "lucide-react";
+import { SunIcon, MoonIcon, ComputerDesktopIcon   } from "@heroicons/react/24/outline";
 
 const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
@@ -22,11 +22,11 @@ const ThemeSwitch = () => {
   const getIcon = (themeName: string) => {
     switch (themeName) {
       case "system":
-        return <Monitor className="w-6 h-6" />;
+        return <ComputerDesktopIcon className="w-6 h-6" />;
       case "dark":
-        return <Moon className="w-6 h-6" />;
+        return <MoonIcon className="w-6 h-6" />;
       case "light":
-        return <Sun className="w-6 h-6" />;
+        return <SunIcon className="w-6 h-6" />;
       default:
         return null;
     }
@@ -61,19 +61,19 @@ const ThemeSwitch = () => {
             className={`cursor-pointer flex items-center justify-center w-full h-12 hover:bg-companyGreen dark:hover:bg-gray-600`}
             onClick={() => handleThemeChange("system")}
           >
-            <Monitor className="w-6 h-6" />
+            <ComputerDesktopIcon className="w-6 h-6" />
           </li>
           <li
             className={`cursor-pointer flex items-center justify-center w-full h-12 hover:bg-companyGreen dark:hover:bg-gray-600`}
             onClick={() => handleThemeChange("dark")}
           >
-            <Moon className="w-6 h-6" />
+            <MoonIcon className="w-6 h-6" />
           </li>
           <li
             className={`cursor-pointer flex items-center justify-center w-full h-12 hover:bg-companyGreen dark:hover:bg-gray-600`}
             onClick={() => handleThemeChange("light")}
           >
-            <Sun className="w-6 h-6" />
+            <SunIcon className="w-6 h-6" />
           </li>
         </ul>
       )}

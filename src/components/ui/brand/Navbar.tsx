@@ -4,8 +4,9 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon,  } from "@heroicons/react/24/outline";
 import PopoverNav from "./PopoverNav";
+import Link from "next/link";
 
 const navigation = [
   { name: "Services", href: "/services", current: true },
@@ -18,7 +19,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Navbar() {
   return (
     <Disclosure as="nav" className="">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -38,7 +39,8 @@ export default function Example() {
               />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+          <div className="flex flex-1  items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
               <img
                 alt="Your Company"
@@ -50,7 +52,7 @@ export default function Example() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? "page" : undefined}
@@ -62,7 +64,7 @@ export default function Example() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
                 <PopoverNav />
               </div>
