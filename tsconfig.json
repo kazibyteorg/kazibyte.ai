@@ -17,11 +17,10 @@
         "name": "next"
       }
     ],
-     "typeRoots": ["./node_modules/@types", "./types"],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/ui/brand/nav/dropdownNavs.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

@@ -1,20 +1,16 @@
-
-import Navbar from '@/components/ui/brand/Navbar';
-import Navbar1 from '@/components/ui/brand/naves/Navbar1';
-import PopoverNav from '@/components/ui/brand/PopoverNav';
-import CenteredCTA from '@/components/ui/eer/CenteredCTA';
-
 import React from 'react'
-
+import Navbar from '@/components/ui/nav/Navbar'
+import HeroSection from "@/components/ui/hero/HeroSection"
+import EnhancedHeroSection from '@/components/ui/hero/EnhancedHeroSection';
 const Home = () => {
   return (
     <div>
-<Navbar1 />
+      <Navbar />
 
-
-     
+      <HeroSection />
+      <EnhancedHeroSection />
     </div>
-  );
+  )
 }
 
 export default Home

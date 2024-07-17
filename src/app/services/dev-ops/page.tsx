@@ -1,3 +1,9 @@
-import { readFileSync } from "fs";
+import React from 'react'
 
-readFileSync
+const FontEndPage = () => {
+  return (
+    <div>FontEndPage</div>
+  )
+}
+
+export default FontEndPage
